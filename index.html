@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Ride - Karachi 10% Commission</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
+body{background:#0a0a0a;color:#fff}
+header{padding:20px;display:flex;justify-content:space-between;align-items:center;background:#111;position:sticky;top:0}
+.logo{font-weight:800;font-size:22px;color:#00ff88}
+.logo span{color:#fff}
+.hero{padding:40px 20px;text-align:center;background:radial-gradient(circle at top,#1a3d2a,#0a0a0a)}
+.hero h1{font-size:32px;line-height:1.2;margin-bottom:15px}
+.hero h1 b{color:#00ff88}
+.btn{background:#00ff88;color:#000;padding:16px 28px;border-radius:14px;font-weight:800;border:none;width:100%;font-size:18px;cursor:pointer;margin-top:10px}
+.card{background:#161616;border:1px solid #222;border-radius:20px;padding:20px;margin:15px}
+.input{width:100%;background:#222;border:1px solid #333;padding:15px;border-radius:12px;color:#fff;margin:10px 0;font-size:16px}
+.price-box{background:linear-gradient(135deg,#00ff88,#00cc6a);color:#000;border-radius:18px;padding:20px;text-align:center;margin-top:15px}
+.tabs{display:flex;background:#111;padding:6px;border-radius:14px;margin:15px;gap:6px}
+.tab{flex:1;padding:12px;text-align:center;border-radius:10px;cursor:pointer;opacity:0.6}
+.tab.active{background:#00ff88;color:#000;opacity:1;font-weight:800}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">DAILY<span>RIDE</span></div>
+<div style="font-size:12px;background:#222;padding:6px 12px;border-radius:20px">📍 Karachi</div>
+</header>
+<div class="hero">
+<h1>Karachi Ki Apni Ride<br><b>10% Commission</b> Only!</h1>
+<p>Careem & Yango 25% lete hain, Hum Sirf 10%! Driver Khush, Passenger Khush!</p>
+</div>
+<div class="card">
+<h3>Book Your Ride Now</h3>
+<input class="input" id="from" placeholder="From: e.g. Gulshan-e-Iqbal" value="Gulshan">
+<input class="input" id="to" placeholder="To: e.g. Saddar" value="Saddar">
+<select class="input" id="type" onchange="updateFare()">
+<option value="180">Bike - Rs 180</option>
+<option value="250">Rickshaw - Rs 250</option>
+<option value="350" selected>Mini Car - Rs 350</option>
+<option value="500">AC Car - Rs 500</option>
+</select>
+<button class="btn" onclick="bookRide()">BOOK RIDE NOW →</button>
+<div class="price-box">
+<p>Estimated Fare</p>
+<h2 id="fare">Rs 350</h2>
+<p style="font-size:12px">Driver Gets Rs <span id="driverGet">315</span> | Careem pe Rs 262 milta!</p>
+</div>
+</div>
+<script>
+function updateFare(){let f=document.getElementById('type').value;document.getElementById('fare').innerText='Rs '+f;document.getElementById('driverGet').innerText=Math.round(f*0.9)}
+function bookRide(){alert('✅ Ride Booked! Driver 2 min me ayega! Inshallah')}
+</script>
+</body>
+</html>
