@@ -1,58 +1,33 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Ride - Karachi 10% Commission</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Ride - All Pakistan AI + Joker Security</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
-body{background:#0a0a0a;color:#fff}
-header{padding:20px;display:flex;justify-content:space-between;align-items:center;background:#111;position:sticky;top:0}
-.logo{font-weight:800;font-size:22px;color:#00ff88}
-.logo span{color:#fff}
-.hero{padding:40px 20px;text-align:center;background:radial-gradient(circle at top,#1a3d2a,#0a0a0a)}
-.hero h1{font-size:32px;line-height:1.2;margin-bottom:15px}
-.hero h1 b{color:#00ff88}
-.btn{background:#00ff88;color:#000;padding:16px 28px;border-radius:14px;font-weight:800;border:none;width:100%;font-size:18px;cursor:pointer;margin-top:10px}
-.card{background:#161616;border:1px solid #222;border-radius:20px;padding:20px;margin:15px}
-.input{width:100%;background:#222;border:1px solid #333;padding:15px;border-radius:12px;color:#fff;margin:10px 0;font-size:16px}
-.price-box{background:linear-gradient(135deg,#00ff88,#00cc6a);color:#000;border-radius:18px;padding:20px;text-align:center;margin-top:15px}
-.tabs{display:flex;background:#111;padding:6px;border-radius:14px;margin:15px;gap:6px}
-.tab{flex:1;padding:12px;text-align:center;border-radius:10px;cursor:pointer;opacity:0.6}
-.tab.active{background:#00ff88;color:#000;opacity:1;font-weight:800}
-.hidden{display:none}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+body{background:#f5f7fb}
+.header{background:#111;color:#fff;padding:14px;display:flex;justify-content:space-between}
+.logo{font-weight:900;font-size:20px}.logo span{color:#00e676}
+.badge{background:#00c853;color:#fff;padding:4px 10px;border-radius:20px;font-size:11px}
+.hero{background:linear-gradient(135deg,#111,#333);color:#fff;padding:28px 18px;text-align:center}
+.card{margin:12px;background:#fff;border-radius:18px;padding:16px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.input{width:100%;padding:14px;border-radius:12px;border:1px solid #e5e7eb;background:#f9fafb;margin:7px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.opt{border:1px solid #e5e7eb;border-radius:12px;padding:12px;text-align:center;cursor:pointer}
+.opt.active{border:2px solid #00c853;background:#e8f5e9;font-weight:700}
+.btn{width:100%;background:#111;color:#fff;padding:16px;border-radius:14px;font-weight:800;border:none;margin-top:10px}
+.mand{border:2px solid #d32f2f;background:#ffebee;border-radius:12px;padding:12px;margin:8px 0}
+.mand2{border:2px solid #2e7d32;background:#e8f5e9;border-radius:12px;padding:12px;margin:8px 0}
+.joker{display:none;position:fixed;inset:0;background:#b71c1c;color:#fff;z-index:99999;justify-content:center;align-items:center;text-align:center;padding:20px}
 </style>
 </head>
-<body>
-<header>
-<div class="logo">DAILY<span>RIDE</span></div>
-<div style="font-size:12px;background:#222;padding:6px 12px;border-radius:20px">📍 Karachi</div>
-</header>
-<div class="hero">
-<h1>Karachi Ki Apni Ride<br><b>10% Commission</b> Only!</h1>
-<p>Careem & Yango 25% lete hain, Hum Sirf 10%! Driver Khush, Passenger Khush!</p>
-</div>
-<div class="card">
-<h3>Book Your Ride Now</h3>
-<input class="input" id="from" placeholder="From: e.g. Gulshan-e-Iqbal" value="Gulshan">
-<input class="input" id="to" placeholder="To: e.g. Saddar" value="Saddar">
-<select class="input" id="type" onchange="updateFare()">
-<option value="180">Bike - Rs 180</option>
-<option value="250">Rickshaw - Rs 250</option>
-<option value="350" selected>Mini Car - Rs 350</option>
-<option value="500">AC Car - Rs 500</option>
-</select>
-<button class="btn" onclick="bookRide()">BOOK RIDE NOW →</button>
-<div class="price-box">
-<p>Estimated Fare</p>
-<h2 id="fare">Rs 350</h2>
-<p style="font-size:12px">Driver Gets Rs <span id="driverGet">315</span> | Careem pe Rs 262 milta!</p>
-</div>
-</div>
-<script>
-function updateFare(){let f=document.getElementById('type').value;document.getElementById('fare').innerText='Rs '+f;document.getElementById('driverGet').innerText=Math.round(f*0.9)}
-function bookRide(){alert('✅ Ride Booked! Driver 2 min me ayega! Inshallah')}
-</script>
+<body oncontextmenu="return jokerTrap()">
+<div id="jokerScreen" class="joker"><div><div style="font-size:80px">🤡</div><h1>HACK BLOCKED!</h1><p>Joker Security</p><button onclick="document.getElementById('jokerScreen').style.display='none'" style="margin-top:16px;padding:10px 18px;border-radius:10px;border:none">Close</button></div></div>
+<div class="header"><div class="logo">Daily Ride <span>🇵🇰</span></div><div class="badge">AI ALL PAKISTAN</div></div>
+<div class="hero"><h1>All Pakistan - <b style="color:#00e676">2 Min Me Driver</b></h1><p>Bike se 40ft Truck tak</p></div>
+<div class="card"><h3>📍 Booking</h3><input class="input" placeholder="Kahan se?"><input class="input" placeholder="Kahan jana hai? (All Pakistan)"><select class="input"><option>Karachi</option><option>Lahore</option><option>Islamabad</option><option>Multan</option><option>Peshawar</option><option>Quetta + All Pakistan</option></select><div class="grid"><div class="opt active">🏍️ Bike</div><div class="opt">🛺 Rickshaw</div><div class="opt">🚗 Car</div><div class="opt">🚐 Suzuki</div><div class="opt">🚚 Mazda</div><div class="opt">🚛 40ft Truck</div></div><button class="btn" onclick="alert('✅ Booked!')">BOOK NOW →</button></div>
+<div class="card"><h3>👨‍✈️ Driver - CNIC + Easypaisa LAZMI</h3><div class="mand"><b>🪪 CNIC LAZMI</b><br><input class="input" id="cnic" placeholder="CNIC Number *"><input type="file" class="input" id="cnicFile"></div><div class="mand2"><b>💰 Easypaisa/JazzCash LAZMI</b><br><input class="input" id="ep" placeholder="Account 03XX *"></div><input class="input" placeholder="License Optional"><button class="btn" onclick="let c=document.getElementById('cnic').value,e=document.getElementById('ep').value,f=document.getElementById('cnicFile').value;if(!c||!f){alert('❌ CNIC LAZMI hai!')}else if(!e){alert('❌ Easypaisa LAZMI hai!')}else{alert('✅ Gari 2 min me active!')}">REGISTER →</button></div>
+<script>function jokerTrap(){document.getElementById('jokerScreen').style.display='flex';return false}document.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{document.querySelectorAll('.opt').forEach(x=>x.classList.remove('active'));o.classList.add('active')})</script>
 </body>
 </html>
