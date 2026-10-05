@@ -1,33 +1,26 @@
 
 <!DOCTYPE html>
-<html lang="ur">
+<html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Ride - All Pakistan AI + Joker Security</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Daily Ride - All Pakistan</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
 body{background:#f5f7fb}
-.header{background:#111;color:#fff;padding:14px;display:flex;justify-content:space-between}
-.logo{font-weight:900;font-size:20px}.logo span{color:#00e676}
-.badge{background:#00c853;color:#fff;padding:4px 10px;border-radius:20px;font-size:11px}
-.hero{background:linear-gradient(135deg,#111,#333);color:#fff;padding:28px 18px;text-align:center}
-.card{margin:12px;background:#fff;border-radius:18px;padding:16px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
-.input{width:100%;padding:14px;border-radius:12px;border:1px solid #e5e7eb;background:#f9fafb;margin:7px 0}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
-.opt{border:1px solid #e5e7eb;border-radius:12px;padding:12px;text-align:center;cursor:pointer}
-.opt.active{border:2px solid #00c853;background:#e8f5e9;font-weight:700}
-.btn{width:100%;background:#111;color:#fff;padding:16px;border-radius:14px;font-weight:800;border:none;margin-top:10px}
-.mand{border:2px solid #d32f2f;background:#ffebee;border-radius:12px;padding:12px;margin:8px 0}
-.mand2{border:2px solid #2e7d32;background:#e8f5e9;border-radius:12px;padding:12px;margin:8px 0}
-.joker{display:none;position:fixed;inset:0;background:#b71c1c;color:#fff;z-index:99999;justify-content:center;align-items:center;text-align:center;padding:20px}
+.header{background:#111;color:#fff;padding:14px 16px;display:flex;justify-content:space-between}
+.badge{background:#00c853;padding:6px 12px;border-radius:20px;font-size:12px;font-weight:800}
+.hero{background:#111;color:#fff;text-align:center;padding:26px 16px}
+.hero h1{font-size:24px}.hero span{color:#00e676}
+.card{margin:12px;background:#fff;border-radius:18px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,.06)}
+input,select{width:100%;padding:13px;border:1.5px solid #ddd;border-radius:12px;margin-bottom:10px;background:#fafafa}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.opt{border:1.5px solid #ddd;padding:12px;border-radius:12px;text-align:center;font-weight:700;cursor:pointer}
+.opt.active{border-color:#00c853;background:#e8f5e9}
+.btn{width:100%;background:#111;color:#fff;padding:14px;border-radius:14px;border:0;font-weight:800}
+.btn-green{background:#00c853}
+.hideBox{background:#111;color:#fff;border-radius:14px;padding:14px;text-align:center;border:2px solid #00c853;margin-bottom:12px}
 </style>
 </head>
-<body oncontextmenu="return jokerTrap()">
-<div id="jokerScreen" class="joker"><div><div style="font-size:80px">🤡</div><h1>HACK BLOCKED!</h1><p>Joker Security</p><button onclick="document.getElementById('jokerScreen').style.display='none'" style="margin-top:16px;padding:10px 18px;border-radius:10px;border:none">Close</button></div></div>
-<div class="header"><div class="logo">Daily Ride <span>🇵🇰</span></div><div class="badge">AI ALL PAKISTAN</div></div>
-<div class="hero"><h1>All Pakistan - <b style="color:#00e676">2 Min Me Driver</b></h1><p>Bike se 40ft Truck tak</p></div>
-<div class="card"><h3>📍 Booking</h3><input class="input" placeholder="Kahan se?"><input class="input" placeholder="Kahan jana hai? (All Pakistan)"><select class="input"><option>Karachi</option><option>Lahore</option><option>Islamabad</option><option>Multan</option><option>Peshawar</option><option>Quetta + All Pakistan</option></select><div class="grid"><div class="opt active">🏍️ Bike</div><div class="opt">🛺 Rickshaw</div><div class="opt">🚗 Car</div><div class="opt">🚐 Suzuki</div><div class="opt">🚚 Mazda</div><div class="opt">🚛 40ft Truck</div></div><button class="btn" onclick="alert('✅ Booked!')">BOOK NOW →</button></div>
-<div class="card"><h3>👨‍✈️ Driver - CNIC + Easypaisa LAZMI</h3><div class="mand"><b>🪪 CNIC LAZMI</b><br><input class="input" id="cnic" placeholder="CNIC Number *"><input type="file" class="input" id="cnicFile"></div><div class="mand2"><b>💰 Easypaisa/JazzCash LAZMI</b><br><input class="input" id="ep" placeholder="Account 03XX *"></div><input class="input" placeholder="License Optional"><button class="btn" onclick="let c=document.getElementById('cnic').value,e=document.getElementById('ep').value,f=document.getElementById('cnicFile').value;if(!c||!f){alert('❌ CNIC LAZMI hai!')}else if(!e){alert('❌ Easypaisa LAZMI hai!')}else{alert('✅ Gari 2 min me active!')}">REGISTER →</button></div>
-<script>function jokerTrap(){document.getElementById('jokerScreen').style.display='flex';return false}document.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{document.querySelectorAll('.opt').forEach(x=>x.classList.remove('active'));o.classList.add('active')})</script>
-</body>
-</html>
+<body>
+<div class="header"><div style="font-weight:900">Daily
